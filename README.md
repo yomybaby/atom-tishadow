@@ -1,5 +1,13 @@
-# tishadow package
+# TiShadow package
 
-A short description of your package.
+A package for [Tishadow](http://github.com/dbankier/tishadow/)
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+This is very first scratch.
+Currently this has a only one feature.
+
+## Send snippet via TiShadow repl
+
+- Send current file to TiShadow repl
+- If there is a selection on current editor, send only selection.
+
+![A screenshot of tishadow package](https://raw.githubusercontent.com/yomybaby/atom-tishadow/master/screenshot.gif)
