@@ -1,7 +1,7 @@
 {
   "name": "tishadow",
   "main": "./lib/tishadow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A package for TiShadow (the toolset for Titanium mobile)",
   "keywords": [
     "titanium",
