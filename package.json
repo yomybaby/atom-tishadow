@@ -1,0 +1,21 @@
+{
+  "name": "tishadow",
+  "main": "./lib/tishadow",
+  "version": "0.0.0",
+  "description": "A package for TiShadow (the toolset for Titanium mobile)",
+  "keywords": [
+    "titanium",
+    "appcelerator",
+    "tishadow",
+    "snippet"
+  ],
+  "activationCommands": {
+    "atom-workspace": "tishadow:pipe"
+  },
+  "repository": "https://github.com/yomybaby/atom-tishadow",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
+}
