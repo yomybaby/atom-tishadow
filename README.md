@@ -5,6 +5,10 @@ A package for [Tishadow](http://github.com/dbankier/tishadow/)
 This is very first scratch.
 Currently this has a only one feature.
 
+```
+apm install tishadow
+```
+
 ## Send snippet via TiShadow repl
 
 - Send current file to TiShadow repl
