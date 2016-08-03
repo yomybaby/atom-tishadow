@@ -10,16 +10,23 @@ module.exports = Tishadow =
     @subscriptions = new CompositeDisposable
 
     # Register command
-    @subscriptions.add atom.commands.add 'atom-workspace', 'tishadow:pipe': => @pipe()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'tishadow:pipe': => @pipeSelection()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'tishadow:closeApp': => @closeApp()
 
   deactivate: ->
     @subscriptions.dispose()
-
-  pipe: ->
+    
+  pipe(snippet): ->
+    command = 'sh'
+    args = ["-c","echo #{snippet} | ts repl --pipe"]
+    stdout = (output) -> console.log(output)
+    exit = (code) -> console.log("ts pipe exit with #{code}")
+    process = new BufferedProcess({command, args, stdout, exit})
+  
+  pipeSelection: ->
     if editor = atom.workspace.getActiveTextEditor()
       snippet = JSON.stringify(editor.getSelectedText() || editor.getText())
-      command = 'sh'
-      args = ["-c","echo #{snippet} | ts repl --pipe"]
-      stdout = (output) -> console.log(output)
-      exit = (code) -> console.log("ts pipe exit with #{code}")
-      process = new BufferedProcess({command, args, stdout, exit})
+      @pipe(snippet)
+  
+  closeApp: ->
+    @pipe('closeApp()')
