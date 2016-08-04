@@ -10,7 +10,10 @@
     "snippet"
   ],
   "activationCommands": {
-    "atom-workspace": "tishadow:pipe"
+    "atom-workspace": [
+      "tishadow:pipe",
+      "tishadow:closeApp"
+    ]
   },
   "repository": "https://github.com/yomybaby/atom-tishadow",
   "license": "MIT",

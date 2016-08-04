@@ -29,4 +29,4 @@ module.exports = Tishadow =
       @pipe(snippet)
   
   closeApp: ->
-    @pipe('closeApp()')
+    @pipe(JSON.stringify('closeApp()'))
