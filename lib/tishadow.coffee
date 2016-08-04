@@ -16,7 +16,7 @@ module.exports = Tishadow =
   deactivate: ->
     @subscriptions.dispose()
     
-  pipe(snippet): ->
+  pipe: (snippet) ->
     command = 'sh'
     args = ["-c","echo #{snippet} | ts repl --pipe"]
     stdout = (output) -> console.log(output)
