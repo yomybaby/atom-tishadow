@@ -18,6 +18,7 @@ module.exports = Tishadow =
     
   pipe: (snippet) ->
     command = 'sh'
+    snippet = snippet.replace(/\$/g,'\\$')
     args = ["-c","echo #{snippet} | ts repl --pipe"]
     stdout = (output) -> console.log(output)
     exit = (code) -> console.log("ts pipe exit with #{code}")
